@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "ViewStudents";
+}
+@model Classmate
+<h1>Current Roster</h1>
+@foreach (var student in Model.Classmates)
+{
+    <p>student</p>
+}
+<form action="ChooseStudent" method="post">
+    <input type="text" name="userInput" />
+    <input type="submit" name="Submit" />
+</form>
+
+@foreach (var student in Model.Classmates)
+{
+    if(Model.Name == userInput)
+        {
+            <p>Model.Hometown</p>
+            <p>Model.FavoriteFood</p>
+        }
+}
+<p>@Model.Name</p>
